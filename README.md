@@ -26,10 +26,10 @@ and the Flutter guide for
 ## Images
 
 <p align="center">
+  <img src="assets/image4.jpg" width="200" />
+  <img src="assets/image3.jpg" width="200" />
   <img src="assets/image1.jpg" width="200" />
   <img src="assets/image2.jpg" width="200" />
-  <img src="assets/image3.jpg" width="200" />
-  <img src="assets/image4.jpg" width="200" />
 </p>
 
 
