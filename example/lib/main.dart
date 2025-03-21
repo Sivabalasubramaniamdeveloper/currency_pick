@@ -57,9 +57,8 @@ class _LoginScreenState extends State<LoginScreen> {
           child: CustomCurrency(
             initialValue: "INR",
             onSaved: (value) {
-              print("value");
-              print(value);
             },
+            countryTextStyle: TextStyle(),
           ),
         ),
       ),

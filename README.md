@@ -11,32 +11,6 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
 
 # Currency Pick
 
@@ -45,9 +19,16 @@ from the package authors, and more.
 
 ## Features
 - List of global currencies
-- Currency name, symbol, and code
+- Currency name, symbol,decimal_digits,number,name_plural and code
 - Customizable UI
 - Lightweight and easy to integrate
+
+## Images
+
+![Currency Picker Example](assets/image1.jpg)
+![Currency Picker Example](assets/image2.jpg)
+![Currency Picker Example](assets/image3.jpg)
+![Currency Picker Example](assets/image4.jpg)
 
 ## Installation
 Add the following dependency to your `pubspec.yaml`:
@@ -70,28 +51,42 @@ import 'package:currency_pick/currency_pick.dart';
 
 ### Example Usage
 ```dart
-// CustomCurrency(
-// initialValue: "INR",
-// onSaved: (value) {
-// print("value");
-// print(value);
-// },
-// )
+CustomCurrency(
+initialValue: "INR",
+onSaved: (value) {
+setState(() {
+totalValueObj=value;
+});
+},
+)
 ```
 
 ## Customization
 You can customize the appearance using optional parameters:
 ```dart
-// CurrencyPicker.showCurrencyPicker(
-//   context: context,
-//   theme: CurrencyPickerTheme(
-//     backgroundColor: Colors.white,
-//     titleStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-//   ),
-//   onSelect: (Currency currency) {
-//     print('Selected: ${currency.code}');
-//   },
-// );
+CustomCurrency(
+initialValue: "INR",
+onSaved: (value) {
+setState(() {
+totalValueObj=value;
+});
+},
+appBar: AppBar(title: Text("Select Currency"),),
+boxDecoration: BoxDecoration(color: Colors.red),
+countryTextStyle: TextStyle(),
+symbolTextStyle: TextStyle(),
+)
+);
+```
+
+![GitHub Link]([https://github.com/Sivabalasubramaniamdeveloper/currency_pick.git])
+
+### Android Version 11 Issue
+If some currency symbols are not supported in Android version 11, you can use the following font family to override the issue:
+```dart
+TextStyle(
+fontFamily: 'NotoSans',
+);
 ```
 
 ## Contributions
