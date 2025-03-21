@@ -28,7 +28,6 @@ class _CurrencySelectionScreenState extends State<CurrencySelectionScreen> {
   }
 
   void onSaved(Map<String, dynamic> currency) {
-    print("Selected Currency: ${currency}");
     Navigator.pop(context, currency);
     widget.onSaved(currency);
   }
