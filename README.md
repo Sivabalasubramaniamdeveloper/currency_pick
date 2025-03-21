@@ -25,10 +25,13 @@ and the Flutter guide for
 
 ## Images
 
-![Currency Picker Example](assets/image1.jpg)
-![Currency Picker Example](assets/image2.jpg)
-![Currency Picker Example](assets/image3.jpg)
-![Currency Picker Example](assets/image4.jpg)
+<p align="center">
+  <img src="assets/image1.jpg" width="200" />
+  <img src="assets/image2.jpg" width="200" />
+  <img src="assets/image3.jpg" width="200" />
+  <img src="assets/image4.jpg" width="200" />
+</p>
+
 
 ## Installation
 Add the following dependency to your `pubspec.yaml`:
