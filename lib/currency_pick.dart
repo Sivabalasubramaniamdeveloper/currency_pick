@@ -1,10 +1,6 @@
-
-
-import 'package:flutter/cupertino.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'currency/currency_controller.dart';
-
 
 class CustomCurrency extends StatefulWidget {
   final String initialValue;
@@ -22,7 +18,8 @@ class CustomCurrency extends StatefulWidget {
     this.onSaved,
     this.countryTextStyle,
     this.symbolTextStyle,
-    this.boxDecoration, this.appBar,
+    this.boxDecoration,
+    this.appBar,
   });
 
   @override
@@ -42,8 +39,8 @@ class _CustomCurrencyState extends State<CustomCurrency> {
 
   void _initializeCurrency() {
     final selectedCurrency = currencies.firstWhere(
-          (currency) =>
-      currency['code'].toString().toLowerCase() ==
+      (currency) =>
+          currency['code'].toString().toLowerCase() ==
           widget.initialValue.toLowerCase(),
       orElse: () => {'flag': '', 'name': '', 'symbol': ''},
     );
@@ -73,7 +70,7 @@ class _CustomCurrencyState extends State<CustomCurrency> {
           children: [
             CachedNetworkImage(
               imageUrl:
-              "https://flagcdn.com/w40/${flag.toString().toLowerCase()}.png",
+                  "https://flagcdn.com/w40/${flag.toString().toLowerCase()}.png",
               errorWidget: (context, url, error) => Icon(Icons.error),
             ),
             SizedBox(width: 10),
